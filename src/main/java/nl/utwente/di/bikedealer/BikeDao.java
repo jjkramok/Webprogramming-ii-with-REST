@@ -1,4 +1,4 @@
-package nl.utwente.di.bikedealer.bike;
+package nl.utwente.di.bikedealer;
 
 import javax.ws.rs.Path;
 import java.util.HashMap;

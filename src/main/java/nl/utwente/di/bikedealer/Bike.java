@@ -1,4 +1,4 @@
-package nl.utwente.di.bikedealer.bike;
+package nl.utwente.di.bikedealer;
 
 import javax.ws.rs.Path;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -22,7 +22,6 @@ public class Bike {
         this.colour = colour;
         this.gender = gender;
     }
-
 
 
     public String getId() {

@@ -1,4 +1,4 @@
-package nl.utwente.di.bikedealer.bike;
+package nl.utwente.di.bikedealer;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -10,7 +10,7 @@ import java.util.Map;
  * Created by tim on 19-5-15.
  */
 
-@Path("/resources/rest")
+@Path("/")
 public class BikeService {
 
     @POST
@@ -19,9 +19,9 @@ public class BikeService {
     }
 
     @GET
-    @Path("/colour={colour}&gender={gender}")
+    //@Path("colour={colour}&gender={gender}")
     @Produces(MediaType.TEXT_HTML)
-    public String getBikes(@PathParam("colour") String colour, @PathParam("gender") String gender) {
+    public String getBikes(@QueryParam("colour") String colour, @QueryParam("gender") String gender) {
         String first    = "<html> <body> <h1> All bikes according to " + colour + " and " + gender + " </h1>";
         String last     = " </body> </html>";
         Map<Integer, Bike> bikeMap = BikeDao.getInstance().getBikeMap();
