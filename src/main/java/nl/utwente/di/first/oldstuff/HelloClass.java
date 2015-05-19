@@ -1,4 +1,4 @@
-package nl.utwente.di.first;
+package nl.utwente.di.first.oldstuff;
 
 
 import javax.ws.rs.GET;
